@@ -85,28 +85,28 @@
 
     base {
       bindings = <
-   &kp TAB   &kp Q   &kp W     &kp E   &kp R            &kp T              &kp Y   &kp U       &kp I    &kp O     &kp P  &kp BSLH
- &kp LCTRL   &kp A   &kp S     &kp D   &kp F            &kp G              &kp H   &kp J       &kp K    &kp L  &kp SEMI  &kp APOS
- &kp LSHFT   &kp Z   &kp X     &kp C   &kp V            &kp B              &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH   &kp ESC
+   &kp TAB   &kp Q   &kp W     &kp E   &kp R            &kp T              &kp Y   &kp U       &kp I    &kp O     &kp P  &kp BACKSPACE
+ &kp LCTRL   &kp A   &kp S     &kp D   &kp F            &kp G              &kp H   &kp J       &kp K    &kp L  &kp SEMI       &kp APOS
+ &kp LSHFT   &kp Z   &kp X     &kp C   &kp V            &kp B              &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH        &kp ESC
                             &kp LALT   &mo 1  &hm LGUI RETURN          &kp SPACE   &mo 2  &kp RSHIFT
       >;
     };
 
     raise {
       bindings = <
- &trans  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT          &kp CARET  &kp AMPERSAND  &kp KP_MULTIPLY  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
- &trans    &trans  &trans    &trans      &trans       &trans             &trans         &trans           &trans                &trans                 &trans  &trans
- &trans    &trans  &trans    &trans      &trans       &trans             &trans         &trans           &trans                &trans                 &trans  &trans
-                             &trans      &trans       &trans             &trans          &mo 3           &trans
+ &kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT          &kp CARET  &kp AMPERSAND  &kp KP_MULTIPLY  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+    &trans    &trans  &trans    &trans      &trans       &trans             &trans         &trans           &trans                &trans                 &trans  &trans
+    &trans    &trans  &trans    &trans      &trans       &trans             &trans         &trans           &trans                &trans                 &trans  &trans
+                                &trans      &trans       &trans             &trans          &mo 3           &trans
       >;
     };
 
     lower {
       bindings = <
- &trans  &kp N1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5          &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0     &trans
- &trans  &trans        &trans        &trans        &trans        &trans             &kp MINUS     &kp EQUAL      &kp LBKT      &kp RBKT      &kp BSLH  &kp GRAVE
- &trans  &trans        &trans        &trans        &trans        &trans             &kp UNDER      &kp PLUS      &kp LBRC      &kp RBRC      &kp PIPE  &kp TILDE
-                                     &trans         &mo 3        &trans                &trans        &trans        &trans
+ &trans    &kp N1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5          &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0         &trans
+ &trans  &kp HOME      &kp LEFT     &kp RIGHT        &kp UP    &kp PAGE_UP                &trans     &kp MINUS     &kp EQUAL      &kp LBKT      &kp RBKT  &kp BACKSLASH
+ &trans   &kp END        &trans        &trans      &kp DOWN  &kp PAGE_DOWN             &kp UNDER      &kp PLUS      &kp LBRC      &kp RBRC      &kp PIPE      &kp TILDE
+                                       &trans         &mo 3         &trans                &trans        &trans        &trans
       >;
     };
 
