@@ -50,7 +50,7 @@
     };
 
     shift {
-      bindings = <&kp LSHIFT>;
+      bindings = <&trans>;
       key-positions = <8 9>;
     };
 
