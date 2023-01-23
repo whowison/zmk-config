@@ -29,11 +29,6 @@
   combos {
     compatible = "zmk,combos";
 
-    tab {
-      bindings = <&trans>;
-      key-positions = <2 3>;
-    };
-
     ctrl {
       bindings = <&kp LCTRL>;
       key-positions = <26 27>;
@@ -47,11 +42,6 @@
     alt {
       bindings = <&kp LEFT_ALT>;
       key-positions = <39 40>;
-    };
-
-    shift {
-      bindings = <&trans>;
-      key-positions = <8 9>;
     };
 
     caps_word {
