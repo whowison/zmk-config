@@ -35,16 +35,6 @@
       key-positions = <26 27>;
     };
 
-    cmd {
-      bindings = <&kp LCMD>;
-      key-positions = <37 38>;
-    };
-
-    alt {
-      bindings = <&kp LEFT_ALT>;
-      key-positions = <39 40>;
-    };
-
     caps_word {
       bindings = <&caps_word>;
       key-positions = <17 18>;
@@ -54,21 +44,14 @@
       bindings = <&kp DEL>;
       key-positions = <32 33>;
     };
+
+    italics {
+      bindings = <&kp LC(I)>;
+      key-positions = <36 41>;
+    };
   };
 
   macros {
-    zed_em_kay: zed_em_kay {
-      compatible = "zmk,behavior-macro";
-      label = "ZM_zed_em_kay";
-      #binding-cells = <0>;
-      bindings =
-        <&macro_press>,
-        <&kp LSHFT>,
-        <&macro_tap>,
-        <&kp Z &kp M &kp K>,
-        <&macro_release>,
-        <&kp LSHFT>;
-    };
   };
 
   keymap {
@@ -76,37 +59,37 @@
 
     base {
       bindings = <
-   &kp TAB   &kp Q   &kp W     &kp E   &kp R            &kp T              &kp Y   &kp U       &kp I    &kp O     &kp P  &kp BACKSPACE
- &kp LCTRL   &kp A   &kp S     &kp D   &kp F            &kp G              &kp H   &kp J       &kp K    &kp L  &kp SEMI       &kp APOS
- &kp LSHFT   &kp Z   &kp X     &kp C   &kp V            &kp B              &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH        &kp ESC
-                            &kp LALT   &mo 1  &hm LGUI RETURN          &kp SPACE   &mo 2  &kp RSHIFT
+  &kp TAB  &kp Q  &kp W     &kp E  &kp R            &kp T        &kp Y  &kp U       &kp I    &kp O     &kp P  &kp BACKSPACE
+&kp LCTRL  &kp A  &kp S     &kp D  &kp F            &kp G        &kp H  &kp J       &kp K    &kp L  &kp SEMI       &kp APOS
+&kp LSHFT  &kp Z  &kp X     &kp C  &kp V            &kp B        &kp N  &kp M   &kp COMMA  &kp DOT  &kp FSLH        &kp ESC
+                         &kp LALT  &mo 1  &hm LGUI RETURN    &kp SPACE  &mo 2  &kp RSHIFT
       >;
     };
 
     raise {
       bindings = <
- &kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT          &kp CARET  &kp AMPERSAND  &kp KP_MULTIPLY  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-    &trans    &trans  &trans    &trans      &trans       &trans             &trans         &trans           &trans                &trans                 &trans  &trans
-    &trans    &trans  &trans    &trans      &trans       &trans             &trans         &trans           &trans                &trans                 &trans  &trans
-                                &trans      &trans       &trans             &trans          &mo 3           &trans
+&kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_MULTIPLY  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+   &trans    &trans  &trans    &trans      &trans       &trans       &trans         &trans           &trans                &trans                 &trans  &trans
+   &trans    &trans  &trans    &trans      &trans       &trans       &trans         &trans           &trans                &trans                 &trans  &trans
+                               &trans      &trans       &trans       &trans          &mo 3           &trans
       >;
     };
 
     lower {
       bindings = <
- &trans    &kp N1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5          &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0     &kp DELETE
- &trans  &kp HOME      &kp LEFT     &kp RIGHT        &kp UP    &kp PAGE_UP                &trans     &kp MINUS     &kp EQUAL      &kp LBKT      &kp RBKT  &kp BACKSLASH
- &trans   &kp END        &trans        &trans      &kp DOWN  &kp PAGE_DOWN             &kp UNDER      &kp PLUS      &kp LBRC      &kp RBRC      &kp PIPE      &kp TILDE
-                                       &trans         &mo 3         &trans                &trans        &trans        &trans
+&trans    &kp N1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0     &kp DELETE
+&trans  &kp HOME      &kp LEFT     &kp RIGHT        &kp UP    &kp PAGE_UP          &trans     &kp MINUS     &kp EQUAL      &kp LBKT      &kp RBKT  &kp BACKSLASH
+&trans   &kp END      &kp HOME       &kp END      &kp DOWN  &kp PAGE_DOWN       &kp UNDER      &kp PLUS      &kp LBRC      &kp RBRC      &kp PIPE      &kp TILDE
+                                      &trans         &mo 3         &trans          &trans        &trans        &trans
       >;
     };
 
     both {
       bindings = <
- &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0          &bt BT_SEL 3  &trans        &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 1          &bt BT_SEL 4  &trans  &out OUT_TOG  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 2            &bt BT_CLR  &trans        &trans  &trans  &trans  &trans
-                         &trans  &trans        &trans                &trans  &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0    &bt BT_SEL 3  &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &bt BT_SEL 1    &bt BT_SEL 4  &trans  &out OUT_TOG  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &bt BT_SEL 2      &bt BT_CLR  &trans        &trans  &trans  &trans  &trans
+                        &trans  &trans        &trans          &trans  &trans        &trans
       >;
     };
   };
