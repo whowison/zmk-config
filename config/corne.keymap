@@ -30,8 +30,8 @@
   combos {
     compatible = "zmk,combos";
 
-    ctrl {
-      bindings = <&kp LCTRL>;
+    delete {
+      bindings = <&kp DELETE>;
       key-positions = <26 27>;
     };
 
@@ -40,14 +40,9 @@
       key-positions = <17 18>;
     };
 
-    delete {
-      bindings = <&kp DEL>;
-      key-positions = <32 33>;
-    };
-
     italics {
       bindings = <&kp LC(I)>;
-      key-positions = <36 41>;
+      key-positions = <32 33>;
     };
   };
 
