@@ -79,6 +79,11 @@
       bindings = <&kp LC(U)>;
       key-positions = <31 32 33>;
     };
+
+    track_changes_MSWord {
+      bindings = <&kp LC(LS(E))>;
+      key-positions = <26 33>;
+    };
   };
 
   macros {
